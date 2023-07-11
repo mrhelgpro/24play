@@ -48,6 +48,8 @@ public class Pickup : MonoBehaviour, IHoldable
 
         _holder.RemoveHoldable(this);
         _holder = null;
+
+        GameManager.ShakeCamera();
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -21,8 +21,6 @@ public class PlayerHolder : MonoBehaviour, IHolder
         _skinTransform.localPosition = new Vector3(0, index, 0);
 
         GameManager.AmountOfPickups = _holdableList.Count;
-
-        Debug.Log(GameManager.AmountOfPickups);
     }
 
     public void RemoveHoldable(IHoldable holdable)
