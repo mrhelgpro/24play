@@ -44,7 +44,7 @@ public class Pickup : MonoBehaviour, IHoldable
     public void RemoveFromHolder(Transform parent)
     {
         _rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
-        _transform.parent = parent; // FIXED IT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        _transform.parent = parent;
 
         _holder.RemoveHoldable(this);
         _holder = null;
@@ -61,7 +61,7 @@ public class Pickup : MonoBehaviour, IHoldable
 
                 if (Mathf.Abs(boxVertical - myVertical) <= 0.1f)
                 {
-                    RemoveFromHolder(collision.transform.parent);
+                    RemoveFromHolder(collision.transform.parent.parent);
 
                     return;
                 }

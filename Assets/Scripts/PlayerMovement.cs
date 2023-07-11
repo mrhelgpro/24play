@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.Mode == GameManager.GameMode.Play)
+        if (GameManager.Mode == GameMode.Play)
         {
             // Get Position
             _horizontal += _direction * Speed * Time.fixedDeltaTime;

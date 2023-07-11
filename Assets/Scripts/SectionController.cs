@@ -15,7 +15,7 @@ public class SectionController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.Mode == GameManager.GameMode.Play)
+        if (GameManager.Mode == GameMode.Play)
         {
             movement();
             checkEndPosition();

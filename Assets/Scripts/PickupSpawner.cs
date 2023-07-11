@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PickupSpawner : MonoBehaviour
@@ -18,10 +16,10 @@ public class PickupSpawner : MonoBehaviour
         float a = Random.Range(-1, 1) * 1.5f;
         float b = Random.Range(-1, 1) * 1.5f;
         float c = Random.Range(-1, 1) * 1.5f;
-
+       
         createPickup(new Vector3(a, 0, 0));
-        createPickup(new Vector3(b, 0, -5));
-        createPickup(new Vector3(c, 0, -10));
+        if (GameManager.AmountOfPickups < 5) createPickup(new Vector3(b, 0, -5));
+        if (GameManager.AmountOfPickups < 10) createPickup(new Vector3(c, 0, -10));
     }
 
     private void createPickup(Vector3 position)

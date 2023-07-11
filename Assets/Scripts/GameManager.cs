@@ -1,31 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum GameMode { Menu, Play, GameOver }
+
 public class GameManager : MonoBehaviour
 {
-    public enum GameMode { Menu, Play, GameOver }
     public static GameMode Mode = GameMode.Menu;
-
-    private void Update()
-    {
-        if (Mode == GameMode.Menu)
-        {
-            if (Input.GetKey(KeyCode.Mouse0))
-            {
-                Play();
-            }
-        }
-
-        if (Mode == GameMode.GameOver)
-        {
-            if (Input.GetKey(KeyCode.Mouse0))
-            {
-                ReloadLevel();
-            }
-        }
-    }
+    public static int AmountOfPickups;
 
     public static void ReloadLevel()
     {
