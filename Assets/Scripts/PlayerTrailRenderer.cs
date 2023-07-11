@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerTrailRenderer : MonoBehaviour
@@ -42,10 +41,5 @@ public class PlayerTrailRenderer : MonoBehaviour
         }
 
         _lineRenderer.SetPositions(_horizontalPoints);
-    }
-
-    private void FixedUpdate()
-    {
-
     }
 }
